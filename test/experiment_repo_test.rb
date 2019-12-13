@@ -10,8 +10,8 @@ module Betas
       repo.add :added_beta, "", Betas::Resolvers::Group.new([])
 
       assert_includes(
-        Beta.new(:added_beta, "", Betas::Resolvers::Group.new([])),
         repo.all,
+        Beta.new(:added_beta, "", Betas::Resolvers::Group.new([])),
       )
     end
 
