@@ -7,7 +7,7 @@ class BetaTest < ActiveSupport::TestCase
     self.beta = Betas::Beta.new(
       :can_opt_in,
       'You can opt your company in to betas.',
-      Betas::Resolvers::Percentage.new(0.1)
+      Betas::Resolvers::Percentage.new(0.1, :can_opt_in)
     )
   end
 

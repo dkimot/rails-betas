@@ -4,10 +4,10 @@ module Betas
   module Resolvers
     class PercentageTest < ActiveSupport::TestCase
       total_participating = 0
-      resolver = Percentage.new 0.1
+      resolver = Percentage.new 0.1, :test
 
       (0..9999).to_a.each_index do |idx|
-        total_participating += 1 if resolver.participating? idx, :test
+        total_participating += 1 if resolver.participating? idx
       end
 
       # ensure we are within 10% of the expected percentage (i.e. with an eligibility percentage of 10%
