@@ -4,6 +4,10 @@ module Betas
       @betas = {}
     end
 
+    def participating? beta_name, id
+      @betas[beta_name].participating? id
+    end
+
     def add name, desc, resolver
       @betas[name] = Beta.new name, desc, resolver
     end
