@@ -13,5 +13,11 @@ module Betas
     def participating? identifier
       @participation_resolver.participating? identifier
     end
+
+    def == other
+      return false unless other.is_a? self.class
+
+      other.name == self.name
+    end
   end
 end
