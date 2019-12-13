@@ -11,7 +11,7 @@ module Betas
     end
 
     def participating? identifier
-      @participation_resolver.participating? identifier, @name
+      @participation_resolver.participating? identifier
     end
   end
 end
