@@ -32,6 +32,12 @@ module Betas
       assert repo.participating? :participatable_beta, "my_id"
     end
 
+    def test_participating_with_bad_name
+      repo = new_repo
+
+      assert repo.participating? :bad_name, "my_id"
+    end
+
     def test_list_all_betas
       repo = new_repo
       repo.add :beta_a, "", Betas::Resolvers::Group.new([])
