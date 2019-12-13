@@ -1,17 +1,19 @@
 module Betas
   class ExperimentRepo
-    @@betas = {}
-
-    def self.add name, desc, resolver
-      @@betas[name] = Beta.new name, desc, resolver
+    def initialize
+      @betas = {}
     end
 
-    def self.find name
-      @@betas[name]
+    def add name, desc, resolver
+      @betas[name] = Beta.new name, desc, resolver
     end
 
-    def self.all
-      @@betas.values
+    def find name
+      @betas[name]
+    end
+
+    def all
+      @betas.values
     end
   end
 end
