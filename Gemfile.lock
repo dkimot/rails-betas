@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    canary_labs (0.1.0)
+    canary_labs (0.2.0)
       rails (~> 4.2.11.1)
 
 GEM
