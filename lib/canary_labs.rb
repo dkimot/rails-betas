@@ -1,3 +1,8 @@
+require 'feature'
+
+require 'resolvers/group'
+require 'resolvers/percentage'
+
 module CanaryLabs
   mattr_accessor :default_participation
 
