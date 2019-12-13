@@ -1,6 +1,6 @@
 require 'digest'
 
-module Betas
+module CanaryLabs
   module Resolvers
     class Percentage
       def initialize(percentage, beta_name)

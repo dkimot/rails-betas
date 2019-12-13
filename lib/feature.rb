@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Betas
-  class Beta
+module CanaryLabs
+  class Feature
     attr_reader :name, :description
 
     def initialize(name, desc, participation_resolver)

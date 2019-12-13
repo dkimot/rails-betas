@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'resolvers/group'
 
-module Betas
+module CanaryLabs
   module Resolvers
     class GroupTest < ActiveSupport::TestCase
       def test_participating

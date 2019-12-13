@@ -1,4 +1,4 @@
-module Betas
+module CanaryLabs
   class ExperimentRepo
     attr_reader :default_participation
 
@@ -16,7 +16,7 @@ module Betas
     end
 
     def add name, desc, resolver
-      @betas[name] = Beta.new name, desc, resolver
+      @betas[name] = Feature.new name, desc, resolver
     end
 
     def find name

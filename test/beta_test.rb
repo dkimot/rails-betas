@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class BetaTest < ActiveSupport::TestCase
+class FeatureTest < ActiveSupport::TestCase
   attr_accessor :beta
 
   setup do
-    self.beta = Betas::Beta.new(
+    self.beta = CanaryLabs::Feature.new(
       :can_opt_in,
       'You can opt your company in to betas.',
-      Betas::Resolvers::Percentage.new(0.1, :can_opt_in)
+      CanaryLabs::Resolvers::Percentage.new(0.1, :can_opt_in)
     )
   end
 
@@ -16,10 +16,10 @@ class BetaTest < ActiveSupport::TestCase
   end
 
   def test_beta_has_description
-    assert_equal 'You can opt your company in to betas', beta.desc
+    assert_equal 'You can opt your company in to canary_labs', beta.desc
   end
 
   def test_beta_has_resolver
-    assert beta.resolver.is_a? Betas::Resolvers::Percentage
+    assert beta.resolver.is_a? CanaryLabs::Resolvers::Percentage
   end
 end

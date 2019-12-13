@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'resolvers/percentage'
 
-module Betas
+module CanaryLabs
   module Resolvers
     class PercentageTest < ActiveSupport::TestCase
       def test_participating

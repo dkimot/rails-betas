@@ -1,4 +1,4 @@
-module Betas
+module CanaryLabs
   module Resolvers
     class Group
       def initialize group
