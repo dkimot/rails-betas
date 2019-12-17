@@ -6,7 +6,7 @@ class FeatureTest < ActiveSupport::TestCase
   setup do
     self.beta = CanaryLabs::Feature.new(
       :can_opt_in,
-      'You can opt your company in to betas.',
+      'You can opt your company in to canary_labs.',
       CanaryLabs::Resolvers::Percentage.new(0.1, :can_opt_in)
     )
   end
@@ -16,10 +16,10 @@ class FeatureTest < ActiveSupport::TestCase
   end
 
   def test_beta_has_description
-    assert_equal 'You can opt your company in to canary_labs', beta.desc
+    assert_equal 'You can opt your company in to canary_labs.', beta.description
   end
 
   def test_beta_has_resolver
-    assert beta.resolver.is_a? CanaryLabs::Resolvers::Percentage
+    assert_respond_to beta, :participating?
   end
 end
