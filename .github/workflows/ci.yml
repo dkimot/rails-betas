@@ -14,6 +14,7 @@ jobs:
           ruby-version: 2.5.5
       - name: Build and test with Rake
         run: |
-          gem install bundler -v 1.17.3
+          sudo apt-get install libsqlite3-dev
+          gem install bundler -v 1.17.3 --no-document
           bundle install
           bundle exec rake
