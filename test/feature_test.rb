@@ -12,7 +12,7 @@ class FeatureTest < ActiveSupport::TestCase
   end
 
   def test_beta_has_name
-    assert_equal :can_opt_out, beta.name
+    assert_equal :can_opt_in, beta.name
   end
 
   def test_beta_has_description
