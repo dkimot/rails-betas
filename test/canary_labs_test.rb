@@ -16,7 +16,7 @@ class CanaryLabsTest < ActiveSupport::TestCase
 
     assert_includes(
       CanaryLabs.all,
-      Feature.new(:added_feat, '', CanaryLabs::Resolvers::Group.new([])),
+      CanaryLabs::Feature.new(:added_feat, '', CanaryLabs::Resolvers::Group.new([])),
     )
   end
 
@@ -24,7 +24,7 @@ class CanaryLabsTest < ActiveSupport::TestCase
     CanaryLabs.add :feat_to_find, '', CanaryLabs::Resolvers::Group.new([])
 
     assert_equal(
-      Feature.new(:feat_to_find, '', CanaryLabs::Resolvers::Group.new([])),
+      CanaryLabs::Feature.new(:feat_to_find, '', CanaryLabs::Resolvers::Group.new([])),
       CanaryLabs.find(:feat_to_find),
     )
   end
@@ -44,6 +44,6 @@ class CanaryLabsTest < ActiveSupport::TestCase
 
     all_feats = CanaryLabs.all
 
-    assert_includes all_feats, Feature.new(:feat_a, '', CanaryLabs::Resolvers::Group.new([]))
+    assert_includes all_feats, CanaryLabs::Feature.new(:feat_a, '', CanaryLabs::Resolvers::Group.new([]))
   end
 end
