@@ -7,7 +7,7 @@ class CanaryLabsTest < ActiveSupport::TestCase
     CanaryLabs.setup
   end
 
-  test "truth" do
+  def test_truth
     assert_kind_of Module, CanaryLabs
   end
 
